@@ -2,10 +2,10 @@ import urllib.request
 from subprocess import call
 from PIL import Image
 
-zoomLevel = 4
+zoomLevel = 3
 dim = {
     3: [7, 5, 7 * 1024, 5 * 1024, 6829, 4795],
-    4: [14, 10, 14 * 1024, 10 * 1024]
+    4: [14, 10, 14 * 1024, 10 * 1024, 13659, 9574]
 }
 
 
@@ -19,7 +19,7 @@ def dig2(i):
 def download_tiles(zoom_level, layer, dimensions=dim):
     base_url = 'http://mapserver1.biochemical-pathways.com/map1/'
     base_url_suffix = '.png?v=4'
-
+    filenames = []
     for row in range(dimensions[zoom_level][1]):
         for col in range(dimensions[zoom_level][0]):
             url = base_url + layer + '/' + \
@@ -27,7 +27,14 @@ def download_tiles(zoom_level, layer, dimensions=dim):
                 '/' + str(row) + base_url_suffix
             filename = layer + '_' + \
                 str(zoom_level) + '_' + dig2(row) + '_' + dig2(col) + '.png'
+            filenames.append('images/' + filename)
             urllib.request.urlretrieve(url, 'images/' + filename)
+    
+    for filename in filenames:
+        with Image.open(filename) as im:
+            if im.size[0] < 1024:
+                im  = im.resize((1024,1024))
+                im.save(filename)
 
 
 def assemble_tiles(zoom_level, layer, dimensions=dim):
@@ -63,5 +70,5 @@ for l in layers:
     finalimg.save('in-progress/progress' + l + '.png')
     tempimg.close()
 
-#finalimg = finalimg.crop((0, 0, dim[zoomLevel][4], dim[zoomLevel][5]))
+finalimg = finalimg.crop((0, 0, dim[zoomLevel][4], dim[zoomLevel][5]))
 finalimg.save('finalimg.png')
