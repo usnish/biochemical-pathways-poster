@@ -2,11 +2,18 @@ import urllib.request
 from subprocess import call
 from PIL import Image
 
-zoomLevel = 3
+zoomLevel = 4
 dim = {
-    3: [7, 5, 7168, 5120, 6829, 4795],
-    4: [14, 10]
+    3: [7, 5, 7 * 1024, 5 * 1024, 6829, 4795],
+    4: [14, 10, 14 * 1024, 10 * 1024]
 }
+
+
+def dig2(i):
+    if len(str(i)) == 2:
+        return str(i)
+    else:
+        return '0' + str(i)
 
 
 def download_tiles(zoom_level, layer, dimensions=dim):
@@ -19,7 +26,7 @@ def download_tiles(zoom_level, layer, dimensions=dim):
                 str(zoom_level) + '/' + str(col) + \
                 '/' + str(row) + base_url_suffix
             filename = layer + '_' + \
-                str(zoom_level) + '_' + str(row) + '_' + str(col) + '.png'
+                str(zoom_level) + '_' + dig2(row) + '_' + dig2(col) + '.png'
             urllib.request.urlretrieve(url, 'images/' + filename)
 
 
@@ -56,5 +63,5 @@ for l in layers:
     finalimg.save('in-progress/progress' + l + '.png')
     tempimg.close()
 
-finalimg = finalimg.crop((0, 0, dim[zoomLevel][4], dim[zoomLevel][5]))
+#finalimg = finalimg.crop((0, 0, dim[zoomLevel][4], dim[zoomLevel][5]))
 finalimg.save('finalimg.png')
