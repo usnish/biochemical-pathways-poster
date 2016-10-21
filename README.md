@@ -2,7 +2,8 @@
 
 After officially shutting down print production of its famous biochemical pathways posters, Roche made the posters available via a [nifty online interface](http://biochemical-pathways.com/#/map/1).
 This script will download and assemble the Metabolic Pathways poster from the tiles hosted on their server to give you a printable, large PNG file.
-[Lower-quality JPEG of whole image](https://github.com/usnish/biochemical-pathways-poster/blob/master/finalimg.jpg)
+
+[For the lazy: lower-quality JPEG of whole image](https://github.com/usnish/biochemical-pathways-poster/blob/master/finalimg.jpg)
 
 ![preview jpeg](preview.jpg)
 
