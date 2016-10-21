@@ -15,5 +15,5 @@ Additionally, make sure you have all the requirements in `requirements.txt` by r
 `python extract_matabol.py` will dump all the raw tiles in `images/`, assembled layers in `assembled/`, and final images in the root directory.
 
 ## Future features
-Higher zoom level (massive image)
-Printable part 2: cellular mechanisms
+- Higher zoom level (massive image)
+- Printable part 2: cellular mechanisms
