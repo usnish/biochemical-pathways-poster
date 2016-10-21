@@ -1,0 +1,17 @@
+template:
+http://mapserver1.biochemical-pathways.com/map1/[layer]/[zoom level 1 - XX]/[x position]/[y position].png?v=4
+
+layers:
+background 0
+grid 3 (ignore)
+enzymes 1
+substrates 1
+coenzymes 1
+unicellularOrganisms 2
+higherPlants 2
+regulatoryEffects 1
+
+level 4, xmax = 13, ymax = 9
+level 3, xmax = 6, ymax = 4
+
+
