@@ -1,7 +1,6 @@
 # Biochemical Pathways Poster
 
-After officially shutting down print production of its famous biochemical pathways posters, Roche made the posters available via a [nifty online interface](http://biochemical-pathways.com/#/map/1).
-This script will download and assemble the Metabolic Pathways poster from the tiles hosted on their server to give you a printable, large PNG file.
+After officially shutting down print production of its famous biochemical pathways posters, Roche made the posters available via a [nifty online interface](http://biochemical-pathways.com/#/map/1). Unfortunately, this has left people who want a paper copy without a good option. This script will download and assemble the Metabolic Pathways poster from the tiles hosted on their server to give you a large, printable PNG file.
 ### For the lazy:
 - [high-quality PNG (13654 x 9571 px) on dropbox](https://dl.dropboxusercontent.com/u/19397190/finalimg_hires.png)
 - [medium-quality PNG (6829 x 4795 px) on dropbox](https://dl.dropboxusercontent.com/u/19397190/finalimg.png)
