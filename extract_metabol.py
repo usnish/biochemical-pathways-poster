@@ -57,7 +57,7 @@ def assemble_tiles(zoom_level, layer, dimensions=dim):
     outfile = 'assembled/' + layer + '_' + str(zoom_level) + '.png'
     command = 'montage -mode concatenate -tile ' + \
         dimstring + ' ' + filename + ' ' + outfile
-    call(command, shell=True)
+    call(command)
 
 # quick function to aid in layering the layers together
 
