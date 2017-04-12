@@ -12,7 +12,7 @@ You will need `Python > 3.5.2` and [ImageMagick](http://www.imagemagick.org/scri
 Additionally, make sure you have all the requirements in `requirements.txt` by running `pip install -r requirements.txt`.
 
 ## Usage
-`python extract_matabol.py` will dump all the raw tiles in `images/`, assembled layers in `assembled/`, and final images in the root directory.
+`python extract_metabol.py` will dump all the raw tiles in `images/`, assembled layers in `assembled/`, and final images in the root directory.
 
 Specify the zoom level by changing `zoomLevel` within `extract_metabol.py`.
 
