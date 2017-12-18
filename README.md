@@ -4,7 +4,7 @@ After officially shutting down print production of its famous biochemical pathwa
 
 ## Requirements
 ### *So far, I don't think this works on Windows; I don't have a Windows machine, real or virtual, to test it out on*
-You will need `Python > 3.5.2` *and* [ImageMagick](http://www.imagemagick.org/script/index.php). I ran this script on OSX, and do not know if it works on Windows.
+You will need `Python > 3.5.2` *and* [ImageMagick](http://www.imagemagick.org/script/index.php). I ran this script on OSX.
 Additionally, make sure you have all the requirements in `requirements.txt` by running `pip install -r requirements.txt`.
 
 ### For the lazy:
