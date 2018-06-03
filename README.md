@@ -2,6 +2,9 @@
 
 After officially shutting down print production of its famous biochemical pathways posters, Roche made the posters available via a [nifty online interface](http://biochemical-pathways.com/#/map/1). Unfortunately, this has left people who want a paper copy without a good option. This script will download and assemble the Metabolic Pathways poster from the tiles hosted on their server to give you a large, printable PNG file.
 
+** turns out they are offering printed copies again!
+https://www.roche.com/sustainability/philanthropy/science_education/pathways/pathways-ordering.htm
+
 ## Requirements
 ### *So far, I don't think this works on Windows; I don't have a Windows machine, real or virtual, to test it out on*
 You will need `Python > 3.5.2` *and* [ImageMagick](http://www.imagemagick.org/script/index.php). I ran this script on OSX.
