@@ -1,5 +1,11 @@
 # this script will download and assemble the metabolic pathways poster from biochemical-pathways.com
 # Usnish Majumdar, 10/21/16
+
+# check python version before urllib
+import sys
+if sys.version_info[0] < 3:
+    raise Exception("Python Version > 3 is required.")
+
 # IMPORTS
 import urllib.request
 from subprocess import call
