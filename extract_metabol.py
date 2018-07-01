@@ -6,6 +6,15 @@ from subprocess import call
 from PIL import Image
 
 zoomLevel = 3  # change this to either 3 or 4, 4 is higher-resolution than 3
+
+# these are the seven layers of images that come together on the website,
+# in order of z-position from back to front
+layers = ['background', 'enzymes', 'coenzymes', 'substrates',
+          'regulatoryEffects', 'higherPlants', 'unicellularOrganisms', 'grid']
+
+# remove the overlaying grid
+layers.remove('grid')
+
 dim = {
     3: [7, 5, 7 * 1024, 5 * 1024, 6829, 4795],
     4: [14, 10, 14 * 1024, 10 * 1024, 13659, 9574]
@@ -70,11 +79,6 @@ def white2alpha(img):
             if pixdata[x, y] == (255, 255, 255, 255):
                 pixdata[x, y] = (255, 255, 255, 0)
     return img
-
-# these are the seven layers of images that come together on the website,
-# in order of z-position from back to front
-layers = ['background', 'enzymes', 'coenzymes', 'substrates',
-          'regulatoryEffects', 'higherPlants', 'unicellularOrganisms', 'grid']
 
 # start with a blank canvas
 finalimg = Image.new('RGBA', (dim[zoomLevel][2], dim[zoomLevel][3]), "white")
