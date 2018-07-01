@@ -37,8 +37,8 @@ This will dump all the raw tiles in `images/`, assembled layers in `assembled/`,
 * If you want to have the original grid, comment out the line that removes grid from the array in the beginning of `extract_metabol.py`.
 
 ### Pre-Compiled Images
-- [high-quality PNG (13654 x 9571 px)](finalimg_hires.png)
-- [low-quality JPEG](finalimg.jpg)
+- [high-quality PNG (13654 x 9571 px)](prebuilt_hires.png)
+- [low-quality JPEG](prebuilt_lores.jpg)
 
 ## Future features
 - Printable part 2: cellular mechanisms
