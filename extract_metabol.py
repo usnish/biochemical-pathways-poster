@@ -22,8 +22,6 @@ dim = {
 
 # quick function to create two-digit number strings so everything stays in
 # order
-
-
 def dig2(i):
     if len(str(i)) == 2:
         return str(i)
