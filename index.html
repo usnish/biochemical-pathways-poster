@@ -3,184 +3,168 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Metabolic Pathways Poster Archive</title>
+<title>Biochemical Pathways Poster | Usnish (Ush) Majumdar</title>
 <meta name="description" content="Printable renders of Roche's Biochemical Pathways (Part 1: Metabolic Pathways) poster, assembled from biochemical-pathways.com before it went offline.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@300&text=%E0%A6%89%E0%A6%B7%E0%A7%8D%E0%A6%A3%E0%A7%80%E0%A6%B7%20%E0%A6%AE%E0%A6%9C%E0%A7%81%E0%A6%AE%E0%A6%A6%E0%A6%BE%E0%A6%B0&display=swap">
+<!-- Shared stylesheet from the usnish.github.io user site (same origin). -->
+<link rel="stylesheet" href="/css/main.css">
 <style>
-  :root {
-    --bg: #fbfaf7;
-    --surface: #ffffff;
-    --text: #1d1d1b;
-    --muted: #5f5e58;
-    --border: #e3e0d8;
-    --accent: #1f6f5c;
-    --accent-text: #ffffff;
-    --notice-bg: #fff6e0;
-    --notice-border: #e8c870;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #161614;
-      --surface: #1f1f1c;
-      --text: #ecebe6;
-      --muted: #a3a197;
-      --border: #34332e;
-      --accent: #5cc2a6;
-      --accent-text: #0e1f1a;
-      --notice-bg: #2a2416;
-      --notice-border: #6b5a2a;
-    }
-  }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--text);
-    font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  }
-  main { max-width: 960px; margin: 0 auto; padding: 48px 16px 64px; }
-  h1 { font-size: 2rem; line-height: 1.2; margin: 0 0 8px; }
-  h2 { font-size: 1.25rem; margin: 40px 0 12px; }
-  p { margin: 0 0 12px; }
-  .lede { color: var(--muted); font-size: 1.05rem; }
-  a { color: var(--accent); }
+  /* Page-specific styles, using the main site's palette. */
+  .back { display: inline-block; font-size: 13px; color: #6b6b6b; margin-bottom: 12px; }
+  .back:hover { color: #443f5a; text-decoration: none; }
+  h2 { font-size: 20px; line-height: 1.3; letter-spacing: -0.01em; margin: 40px 0 12px; }
+  .lede { color: #6b6b6b; }
   .notice {
-    background: var(--notice-bg);
-    border: 1px solid var(--notice-border);
-    border-radius: 8px;
+    border-left: 3px solid #5b5478;
+    background: #f6f5f9;
+    border-radius: 4px;
     padding: 12px 16px;
     margin: 24px 0;
+    font-size: 15px;
   }
   .preview {
     display: block;
-    border: 1px solid var(--border);
-    border-radius: 8px;
+    border: 1px solid #eee;
+    border-radius: 6px;
     overflow: hidden;
-    background: #fff;
   }
-  .preview img { display: block; width: 100%; height: auto; }
-  .caption { color: var(--muted); font-size: 0.9rem; margin-top: 8px; }
+  .preview img { display: block; width: 100%; height: auto; border-radius: 0; }
+  .preview-detail { margin-top: 24px; }
+  .caption { color: #8a8a8a; font-size: 13px; margin-top: 8px; }
   .downloads {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
     gap: 16px;
   }
   .card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 20px;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    padding: 18px;
     display: flex;
     flex-direction: column;
   }
-  .card h3 { margin: 0 0 4px; font-size: 1.1rem; }
+  .card h3 { margin: 0 0 4px; font-size: 16px; }
+  .card .caption { margin: 0; }
   .card dl {
     display: grid;
     grid-template-columns: auto 1fr;
-    gap: 4px 12px;
-    margin: 12px 0 20px;
-    font-size: 0.95rem;
+    gap: 2px 12px;
+    margin: 12px 0 18px;
+    font-size: 14px;
   }
-  .card dt { color: var(--muted); }
+  .card dt { color: #8a8a8a; }
   .card dd { margin: 0; font-variant-numeric: tabular-nums; }
   .button {
     margin-top: auto;
     display: inline-block;
     text-align: center;
-    background: var(--accent);
-    color: var(--accent-text);
-    text-decoration: none;
+    background: #5b5478;
+    color: #fff;
     font-weight: 600;
-    padding: 10px 16px;
+    font-size: 15px;
+    padding: 8px 14px;
     border-radius: 6px;
   }
-  .button:hover { filter: brightness(1.08); }
-  footer {
-    border-top: 1px solid var(--border);
-    margin-top: 48px;
-    padding-top: 16px;
-    color: var(--muted);
-    font-size: 0.9rem;
-  }
+  .button:hover { background: #443f5a; color: #fff; text-decoration: none; }
+  .page-meta { font-size: 13px; margin-top: 40px; }
 </style>
 </head>
 <body>
-<main>
-  <h1>Biochemical Pathways Poster Archive</h1>
-  <p class="lede">Printable renders of Roche's <em>Biochemical Pathways, Part 1: Metabolic Pathways</em> poster, assembled from the map tiles hosted on biochemical-pathways.com.</p>
+<div class="page">
+  <!-- The sidebar comes from the main site (usnish.github.io/js/sidebar.js, built
+       from its _data/projects.yml) so the projects menu stays in sync. The
+       markup below is only a fallback if that script doesn't load. -->
+  <header class="sidebar" data-site-sidebar>
+    <div id="logo"><a href="/">Usnish (Ush) Majumdar</a></div>
+    <div class="name-bn" lang="bn">উষ্ণীষ মজুমদার</div>
+    <ul class="nav">
+      <li><a href="/projects/">projects</a></li>
+      <li><a href="https://scholar.google.com/citations?hl=en&user=NT3r7pYAAAAJ&view_op=list_works">papers</a></li>
+      <li><a href="https://github.com/usnish/">code</a></li>
+      <li><a href="https://www.instagram.com/usnish/">photos</a></li>
+      <li><a href="https://www.linkedin.com/in/usnish/">linkedin</a></li>
+    </ul>
+  </header>
+  <script src="/js/sidebar.js"></script>
+  <main class="content">
+    <a class="back" href="/">&larr; home</a>
+    <h1>Biochemical Pathways Poster Archive</h1>
+    <p class="lede">Printable renders of Roche's <em>Biochemical Pathways, Part 1: Metabolic Pathways</em> poster, assembled from the map tiles hosted on biochemical-pathways.com.</p>
 
-  <div class="notice">
-    <strong>Archived.</strong> The biochemical-pathways.com tile server no longer resolves, so these images can't be regenerated. The files below are the last renders made while the server was up. Dates are when each image was captured.
-  </div>
-
-  <a class="preview" href="prebuilt_lores.jpg">
-    <img src="poster_thumb.jpg" width="2000" height="1404" alt="The full Roche Metabolic Pathways poster: a dense, color-coded chart of metabolic reactions.">
-  </a>
-  <p class="caption">Full poster, downscaled from the October 21, 2016 JPEG. Click to open it at full size.</p>
-
-  <a class="preview" href="preview.jpg" style="margin-top: 24px">
-    <img src="preview.jpg" width="2178" height="1708" loading="lazy" alt="Close-up of the poster's center, showing glycolysis, pyruvate metabolism and the citrate cycle.">
-  </a>
-  <p class="caption">Detail of the center (citrate cycle and pyruvate metabolism), 2,178 × 1,708 px · captured October 21, 2016.</p>
-
-  <h2>A fixture of the lab</h2>
-  <p>Gerhard Michal first compiled the chart in 1965 at Boehringer Mannheim, now part of Roche, and kept refining it for decades. The company gave it away free, and more than 700,000 printed copies went out. Roche called it a familiar sight "in research institutes, classrooms, and laboratories from Argentina to New Zealand," and the preface to Michal's companion atlas describes the "Boehringer chart" as hanging in "almost every lab working in the field of biochemistry or molecular biology."</p>
-  <p>It put all of metabolism on one wall, so you could follow a molecule from glycolysis into the citrate cycle and on into amino acid metabolism. People kept asking for it: demand outran Roche's free print runs in 2018 and again in 2023, and the chart inspired the <a href="https://news.ycombinator.com/item?id=8243798">MetaCyc pathway databases</a>. This repository has been forked more than two dozen times by people who wanted a copy of their own.</p>
-  <p>Roche has since stopped distributing the poster. This archive keeps it printable, so it can stay on lab walls a little longer.</p>
-  <p class="caption">Sources: <a href="https://www.roche.com/about/philanthropy/science-education/biochemical-pathways">Roche</a> · <a href="https://zenodo.org/records/4446230">Zenodo record</a> · <a href="https://www.chemistryviews.org/details/news/6240781/Online_Access_to_Biochemical_Pathways/">ChemistryViews</a> · <a href="https://books.google.com/books/about/Biochemical_Pathways.html?id=bOLm__KSDskC"><em>Biochemical Pathways</em>, 2nd ed. (Wiley, 2012)</a> · <a href="https://www.rsc.org/events/detail/46620/integration-of-thermodynamic-data-into-the-metabolic-pathways-represented-by-the-boehringer-wall-chart">Royal Society of Chemistry</a> · <a href="https://github.com/usnish/biochemical-pathways-poster/issues/2">issue #2 (2018)</a> · <a href="https://x.com/Roche/status/1650955485892210691">Roche on X (2023)</a></p>
-
-  <h2>Downloads</h2>
-  <div class="downloads">
-    <div class="card">
-      <h3>Print-size PDF</h3>
-      <p class="caption">The high-resolution render, sized to the original printed poster.</p>
-      <dl>
-        <dt>Format</dt><dd>PDF, 1 page</dd>
-        <dt>Page</dt><dd>139 × 97.4 cm (54.7 × 38.4 in)</dd>
-        <dt>Resolution</dt><dd>250 ppi, lossless</dd>
-        <dt>File</dt><dd>20.5 MB</dd>
-        <dt>Captured</dt><dd><time datetime="2017-04-11">April 11, 2017</time></dd>
-      </dl>
-      <a class="button" href="poster_139x98cm.pdf" download>Download PDF</a>
+    <div class="notice">
+      <strong>Archived.</strong> The biochemical-pathways.com tile server no longer resolves, so these images can't be regenerated. The files below are the last renders made while the server was up. Dates are when each image was captured.
     </div>
-    <div class="card">
-      <h3>High resolution</h3>
-      <p class="caption">Best for large-format printing.</p>
-      <dl>
-        <dt>Format</dt><dd>PNG</dd>
-        <dt>Size</dt><dd>13,659 × 9,574 px</dd>
-        <dt>File</dt><dd>22.6 MB</dd>
-        <dt>Source</dt><dd>Zoom level 4</dd>
-        <dt>Captured</dt><dd><time datetime="2017-04-11">April 11, 2017</time></dd>
-      </dl>
-      <a class="button" href="prebuilt_hires.png" download>Download PNG</a>
+
+    <a class="preview" href="prebuilt_lores.jpg">
+      <img src="poster_thumb.jpg" width="2000" height="1404" alt="The full Roche Metabolic Pathways poster: a dense, color-coded chart of metabolic reactions.">
+    </a>
+    <p class="caption">Full poster, downscaled from the October 21, 2016 JPEG. Click to open it at full size.</p>
+
+    <a class="preview preview-detail" href="preview.jpg">
+      <img src="preview.jpg" width="2178" height="1708" loading="lazy" alt="Close-up of the poster's center, showing glycolysis, pyruvate metabolism and the citrate cycle.">
+    </a>
+    <p class="caption">Detail of the center (citrate cycle and pyruvate metabolism), 2,178 × 1,708 px · captured October 21, 2016.</p>
+
+    <h2>A fixture of the lab</h2>
+    <p>Gerhard Michal first compiled the chart in 1965 at Boehringer Mannheim, now part of Roche, and kept refining it for decades. The company gave it away free, and more than 700,000 printed copies went out. Roche called it a familiar sight "in research institutes, classrooms, and laboratories from Argentina to New Zealand," and the preface to Michal's companion atlas describes the "Boehringer chart" as hanging in "almost every lab working in the field of biochemistry or molecular biology."</p>
+    <p>It put all of metabolism on one wall, so you could follow a molecule from glycolysis into the citrate cycle and on into amino acid metabolism. People kept asking for it: demand outran Roche's free print runs in 2018 and again in 2023, and the chart inspired the <a href="https://news.ycombinator.com/item?id=8243798">MetaCyc pathway databases</a>. This repository has been forked more than two dozen times by people who wanted a copy of their own.</p>
+    <p>Roche has since stopped distributing the poster. This archive keeps it printable, so it can stay on lab walls a little longer.</p>
+    <p class="caption">Sources: <a href="https://www.roche.com/about/philanthropy/science-education/biochemical-pathways">Roche</a> · <a href="https://zenodo.org/records/4446230">Zenodo record</a> · <a href="https://www.chemistryviews.org/details/news/6240781/Online_Access_to_Biochemical_Pathways/">ChemistryViews</a> · <a href="https://books.google.com/books/about/Biochemical_Pathways.html?id=bOLm__KSDskC"><em>Biochemical Pathways</em>, 2nd ed. (Wiley, 2012)</a> · <a href="https://www.rsc.org/events/detail/46620/integration-of-thermodynamic-data-into-the-metabolic-pathways-represented-by-the-boehringer-wall-chart">Royal Society of Chemistry</a> · <a href="https://github.com/usnish/biochemical-pathways-poster/issues/2">issue #2 (2018)</a> · <a href="https://x.com/Roche/status/1650955485892210691">Roche on X (2023)</a></p>
+
+    <h2>Downloads</h2>
+    <div class="downloads">
+      <div class="card">
+        <h3>Print-size PDF</h3>
+        <p class="caption">The high-resolution render, sized to the original printed poster.</p>
+        <dl>
+          <dt>Format</dt><dd>PDF, 1 page</dd>
+          <dt>Page</dt><dd>139 × 97.4 cm (54.7 × 38.4 in)</dd>
+          <dt>Resolution</dt><dd>250 ppi, lossless</dd>
+          <dt>File</dt><dd>20.5 MB</dd>
+          <dt>Captured</dt><dd><time datetime="2017-04-11">April 11, 2017</time></dd>
+        </dl>
+        <a class="button" href="poster_139x98cm.pdf" download>Download PDF</a>
+      </div>
+      <div class="card">
+        <h3>High resolution</h3>
+        <p class="caption">Best for large-format printing.</p>
+        <dl>
+          <dt>Format</dt><dd>PNG</dd>
+          <dt>Size</dt><dd>13,659 × 9,574 px</dd>
+          <dt>File</dt><dd>22.6 MB</dd>
+          <dt>Source</dt><dd>Zoom level 4</dd>
+          <dt>Captured</dt><dd><time datetime="2017-04-11">April 11, 2017</time></dd>
+        </dl>
+        <a class="button" href="prebuilt_hires.png" download>Download PNG</a>
+      </div>
+      <div class="card">
+        <h3>Standard resolution</h3>
+        <p class="caption">Smaller file, fine for screens and posters up to ~A1.</p>
+        <dl>
+          <dt>Format</dt><dd>JPEG</dd>
+          <dt>Size</dt><dd>6,829 × 4,795 px</dd>
+          <dt>File</dt><dd>13.0 MB</dd>
+          <dt>Source</dt><dd>Zoom level 3</dd>
+          <dt>Captured</dt><dd><time datetime="2016-10-21">October 21, 2016</time></dd>
+        </dl>
+        <a class="button" href="prebuilt_lores.jpg" download>Download JPEG</a>
+      </div>
     </div>
-    <div class="card">
-      <h3>Standard resolution</h3>
-      <p class="caption">Smaller file, fine for screens and posters up to ~A1.</p>
-      <dl>
-        <dt>Format</dt><dd>JPEG</dd>
-        <dt>Size</dt><dd>6,829 × 4,795 px</dd>
-        <dt>File</dt><dd>13.0 MB</dd>
-        <dt>Source</dt><dd>Zoom level 3</dd>
-        <dt>Captured</dt><dd><time datetime="2016-10-21">October 21, 2016</time></dd>
-      </dl>
-      <a class="button" href="prebuilt_lores.jpg" download>Download JPEG</a>
-    </div>
-  </div>
 
-  <h2>Print size</h2>
-  <p>The printed Part 1 poster measured about 139 × 98 cm, a bit larger than A0. The <a href="https://www.rsc.org/events/detail/46620/integration-of-thermodynamic-data-into-the-metabolic-pathways-represented-by-the-boehringer-wall-chart">Royal Society of Chemistry</a> describes it as "larger than DIN A0 format: an enormous 1.4 x 1 m", and other descriptions give 139 × 98 cm. Some blogs quote 52 × 36 in (132 × 91 cm). The PDF is 139 cm wide. The render is slightly wider in proportion than 139 × 98, so the page comes out 97.4 cm tall without cropping or stretching.</p>
-  <p>For a smaller print, scale the PDF to fit. At A0 (118.9 × 84.1 cm) it still prints at about 290 ppi.</p>
+    <h2>Print size</h2>
+    <p>The printed Part 1 poster measured about 139 × 98 cm, a bit larger than A0. The <a href="https://www.rsc.org/events/detail/46620/integration-of-thermodynamic-data-into-the-metabolic-pathways-represented-by-the-boehringer-wall-chart">Royal Society of Chemistry</a> describes it as "larger than DIN A0 format: an enormous 1.4 x 1 m", and other descriptions give 139 × 98 cm. Some blogs quote 52 × 36 in (132 × 91 cm). The PDF is 139 cm wide. The render is slightly wider in proportion than 139 × 98, so the page comes out 97.4 cm tall without cropping or stretching.</p>
+    <p>For a smaller print, scale the PDF to fit. At A0 (118.9 × 84.1 cm) it still prints at about 290 ppi.</p>
 
-  <h2>About</h2>
-  <p>After Roche stopped printing the posters, it put them online as an interactive tile map. This project's script downloaded those tiles and stitched the layers (background, enzymes, coenzymes, substrates, regulatory effects, higher plants, unicellular organisms) into a single printable image, with the coordinate grid removed.</p>
-  <p>Roche also offered its own print-ready PDFs of both posters for a time. A snapshot of that download is archived on <a href="https://zenodo.org/records/4446230">Zenodo (record 4446230)</a>.</p>
-  <p>The poster artwork belongs to Roche. This page only preserves the renders for personal and educational use.</p>
-  <p>The original download scripts are kept in <a href="https://github.com/usnish/biochemical-pathways-poster/tree/master/legacy"><code>legacy/</code></a> for reference. They no longer work.</p>
+    <h2>About</h2>
+    <p>After Roche stopped printing the posters, it put them online as an interactive tile map. This project's script downloaded those tiles and stitched the layers (background, enzymes, coenzymes, substrates, regulatory effects, higher plants, unicellular organisms) into a single printable image, with the coordinate grid removed.</p>
+    <p>Roche also offered its own print-ready PDFs of both posters for a time. A snapshot of that download is archived on <a href="https://zenodo.org/records/4446230">Zenodo (record 4446230)</a>.</p>
+    <p>The poster artwork belongs to Roche. This page only preserves the renders for personal and educational use.</p>
+    <p>The original download scripts are kept in <a href="https://github.com/usnish/biochemical-pathways-poster/tree/master/legacy"><code>legacy/</code></a> for reference. They no longer work.</p>
 
-  <footer>
-    Maintained by Usnish Majumdar · <a href="https://github.com/usnish/biochemical-pathways-poster">Source on GitHub</a>
-  </footer>
-</main>
+    <p class="page-meta"><a href="https://github.com/usnish/biochemical-pathways-poster">source on GitHub</a></p>
+  </main>
+</div>
 </body>
 </html>
