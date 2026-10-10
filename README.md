@@ -1,44 +1,33 @@
-# Biochemical Pathways Poster
+# Biochemical Pathways Poster (Archive)
 
-After officially shutting down print production of its famous biochemical pathways posters, Roche made the posters available via a [nifty online interface](http://biochemical-pathways.com/#/map/1). Unfortunately, this has left people who want a paper copy without a good option. This script will download and assemble the Metabolic Pathways poster from the tiles hosted on their server to give you a large, printable PNG file.
+> **Archived.** The biochemical-pathways.com tile server no longer resolves, so the poster can't be regenerated. This repository now only hosts the last renders made while the server was up.
 
-## Requirements
-You will need the following requirements:
-* `Python > 3.5.2`
-* [ImageMagick](http://www.imagemagick.org/script/index.php).
+**Browse and download:** https://usnish.github.io/biochemical-pathways-poster/
 
-The script will run on OSX and linux machines. Windows was not tested, yet.
+Printable renders of Roche's *Biochemical Pathways, Part 1: Metabolic Pathways* poster, assembled from the map tiles Roche hosted on biochemical-pathways.com after it stopped printing the poster.
 
-Install the requirements in `requirements.txt` by running
+![Full Metabolic Pathways poster](poster_thumb.jpg)
 
-```bash
-pip install -r requirements.txt
-```
+## Downloads
 
-![preview jpeg](preview.jpg)
+| File | Format | Dimensions | Size | Source | Captured |
+|---|---|---|---|---|---|
+| [poster_139x98cm.pdf](poster_139x98cm.pdf) | PDF | 139 × 97.4 cm page, 250 ppi | 20.5 MB | Hi-res PNG embedded losslessly, sized for print (PDF built 2026-10-10) | 2017-04-11 |
+| [prebuilt_hires.png](prebuilt_hires.png) | PNG | 13,659 × 9,574 px | 22.6 MB | Zoom level 4 | 2017-04-11 |
+| [prebuilt_lores.jpg](prebuilt_lores.jpg) | JPEG | 6,829 × 4,795 px | 13.0 MB | Zoom level 3 | 2016-10-21 |
+| [preview.jpg](preview.jpg) | JPEG | 2,178 × 1,708 px | 1.5 MB | Detail crop of the center | 2016-10-21 |
+| [poster_thumb.jpg](poster_thumb.jpg) | JPEG | 2,000 × 1,404 px | 0.9 MB | Downscaled from `prebuilt_lores.jpg` (for the web page) | 2026-10-10 |
 
+"Captured" is when the image was generated and first committed. The 2018 change to the file names (`finalimg*` → `prebuilt_*`) left the image contents unchanged.
 
-## Usage
+## Print size
 
-run the script from the command line using
-```bash
-python extract_metabol.py
-```
+The printed Part 1 poster was about 139 × 98 cm, a bit larger than A0 ([RSC](https://www.rsc.org/events/detail/46620/integration-of-thermodynamic-data-into-the-metabolic-pathways-represented-by-the-boehringer-wall-chart): "an enormous 1.4 x 1 m"). Some blogs quote 52 × 36 in. The PDF keeps the render's proportions at 139 cm wide, so the page is 97.4 cm tall. Scaled to fit A0, it still prints at ~290 ppi.
 
-if python2 is installed, along with python3, make sure to call the script using python3.
-```bash
-python3 extract_metabol.py
-```
+Roche's own print-ready PDFs of both posters, from when it offered them as a download, are archived on [Zenodo (record 4446230)](https://zenodo.org/records/4446230).
 
-This will dump all the raw tiles in `images/`, assembled layers in `assembled/`, and the final image `finalimg.png` in the root directory.
+The poster artwork belongs to Roche. These renders are preserved for personal and educational use.
 
-### options
-* Specify the zoom level by changing `zoomLevel` at the beginning of `extract_metabol.py`.
-* If you want to have the original grid, comment out the line that removes grid from the array in the beginning of `extract_metabol.py`.
+## Legacy scripts
 
-### Pre-Compiled Images
-- [high-quality PNG (13654 x 9571 px)](prebuilt_hires.png)
-- [low-quality JPEG](prebuilt_lores.jpg)
-
-## Future features
-- Printable part 2: cellular mechanisms
+The original download-and-assemble scripts are in [`legacy/`](legacy/). They depend on the now-offline tile server and will not run successfully.
