@@ -73,34 +73,21 @@
 </head>
 <body>
 <div class="page">
-  <header class="sidebar">
+  <!-- The sidebar comes from the main site (usnish.github.io/js/sidebar.js, built
+       from its _data/projects.yml) so the projects menu stays in sync. The
+       markup below is only a fallback if that script doesn't load. -->
+  <header class="sidebar" data-site-sidebar>
     <div id="logo"><a href="/">Usnish (Ush) Majumdar</a></div>
     <div class="name-bn" lang="bn">উষ্ণীষ মজুমদার</div>
     <ul class="nav">
-      <li>
-        <details class="nav-dropdown">
-          <summary>projects</summary>
-          <ul>
-            <li><a href="/biochemical-pathways-poster/">Biochemical Pathways Poster</a></li>
-            <li>
-              <details class="nav-dropdown">
-                <summary>Data Visualizations</summary>
-                <ul>
-                  <li><a href="/cardiac-rehab-map/">Cardiac Rehab Participation by Region and State</a></li>
-                  <li><a href="/cr-eligibility-map/">Cardiac Rehab Eligibility by County</a></li>
-                </ul>
-              </details>
-            </li>
-            <li><a href="/projects/">all projects &rarr;</a></li>
-          </ul>
-        </details>
-      </li>
+      <li><a href="/projects/">projects</a></li>
       <li><a href="https://scholar.google.com/citations?hl=en&user=NT3r7pYAAAAJ&view_op=list_works">papers</a></li>
       <li><a href="https://github.com/usnish/">code</a></li>
       <li><a href="https://www.instagram.com/usnish/">photos</a></li>
       <li><a href="https://www.linkedin.com/in/usnish/">linkedin</a></li>
     </ul>
   </header>
+  <script src="/js/sidebar.js"></script>
   <main class="content">
     <a class="back" href="/">&larr; home</a>
     <h1>Biochemical Pathways Poster Archive</h1>
